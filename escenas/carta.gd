@@ -20,8 +20,21 @@ func _on_pressed():
 
 func flip():
 	is_face_up = true
-	texture_normal = front_texture
+	var tween = create_tween()
+	
+	# Comprime la carta en 0.15 segundos
+	tween.tween_property(self, "scale:x", 0.0, 0.15)
+	
+	# Cambia la imagen justo cuando no se ve
+	tween.tween_callback(func(): texture_normal = front_texture)
+	
+	# Restaura el ancho original
+	tween.tween_property(self, "scale:x", 1.0, 0.15)
 
 func unflip():
 	is_face_up = false
-	texture_normal = back_texture
+	var tween = create_tween()
+	
+	tween.tween_property(self, "scale:x", 0.0, 0.15)
+	tween.tween_callback(func(): texture_normal = back_texture)
+	tween.tween_property(self, "scale:x", 1.0, 0.15)
