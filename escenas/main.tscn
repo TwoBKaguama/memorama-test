@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cn2s7scjwmekc"]
+
+[ext_resource type="Script" uid="uid://be4bf2l0t8nuc" path="res://escenas/main.gd" id="1_d7u15"]
+
+[node name="main" type="Node2D" unique_id=906851333]
+script = ExtResource("1_d7u15")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=185867013]
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 4
+
+[node name="Timer" type="Timer" parent="." unique_id=1075188972]
+one_shot = true

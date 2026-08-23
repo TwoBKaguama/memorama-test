@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://biktjj0hr0gh1"]
+
+[ext_resource type="Script" uid="uid://drvw7syyayxso" path="res://escenas/carta.gd" id="1_nqtiw"]
+
+[node name="Carta" type="TextureButton" unique_id=948829821]
+offset_left = 73.0
+offset_top = 36.0
+offset_right = 110.0
+offset_bottom = 76.0
+script = ExtResource("1_nqtiw")

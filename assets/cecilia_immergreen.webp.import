@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0hj5fdawuas5"
-path="res://.godot/imported/cecilia_immergreen.webp-ee69a1c03ee03401f177dd9a1d22e61c.ctex"
+path="res://.godot/imported/cecilia_immergreen.webp-94d6845445184a012dd5149de65a9a67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cards/cecilia_immergreen.webp"
-dest_files=["res://.godot/imported/cecilia_immergreen.webp-ee69a1c03ee03401f177dd9a1d22e61c.ctex"]
+source_file="res://assets/cecilia_immergreen.webp"
+dest_files=["res://.godot/imported/cecilia_immergreen.webp-94d6845445184a012dd5149de65a9a67.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b007mlkumkomt"
-path="res://.godot/imported/honshou_marin.webp-3dcd54bb6635e55776ff77e1819a27a0.ctex"
+path="res://.godot/imported/honshou_marin.webp-b8761cc1b336356b65206e5963508c3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cards/honshou_marin.webp"
-dest_files=["res://.godot/imported/honshou_marin.webp-3dcd54bb6635e55776ff77e1819a27a0.ctex"]
+source_file="res://assets/honshou_marin.webp"
+dest_files=["res://.godot/imported/honshou_marin.webp-b8761cc1b336356b65206e5963508c3d.ctex"]
 
 [params]
 

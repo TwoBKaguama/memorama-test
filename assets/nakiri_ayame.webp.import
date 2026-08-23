@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjwq1jc8p3dug"
-path="res://.godot/imported/nakiri_ayame.webp-a6e8a1d9c3673f8e4ab2002877dfcb60.ctex"
+path="res://.godot/imported/nakiri_ayame.webp-5ddd31e0582834b378c2107795c9142d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cards/nakiri_ayame.webp"
-dest_files=["res://.godot/imported/nakiri_ayame.webp-a6e8a1d9c3673f8e4ab2002877dfcb60.ctex"]
+source_file="res://assets/nakiri_ayame.webp"
+dest_files=["res://.godot/imported/nakiri_ayame.webp-5ddd31e0582834b378c2107795c9142d.ctex"]
 
 [params]
 
