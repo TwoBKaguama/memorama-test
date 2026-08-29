@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqhre0f1m5e8f"
-path="res://.godot/imported/mizumiya_su.webp-3b93590666e447e43891170a4c86f86e.ctex"
+uid="uid://jds15mu8qs55"
+path="res://.godot/imported/Sin_carta.webp-016fe8acbd84b64688ae485bae8faf34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mizumiya_su.webp"
-dest_files=["res://.godot/imported/mizumiya_su.webp-3b93590666e447e43891170a4c86f86e.ctex"]
+source_file="res://assets/Sin_carta.webp"
+dest_files=["res://.godot/imported/Sin_carta.webp-016fe8acbd84b64688ae485bae8faf34.ctex"]
 
 [params]
 

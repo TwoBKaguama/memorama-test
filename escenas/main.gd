@@ -1,22 +1,22 @@
 extends Node2D
 
-@onready var grid = $GridContainer
+@onready var grid = $CenterContainer/GridContainer
 @onready var timer = $Timer
+@onready var pantalla_victoria = $PantallaVictoria
+var pares_encontrados = 0
 
-# Cargar la escena de la carta
 var card_scene = preload("res://escenas/carta.tscn")
 
-# Texturas (Rutas de ejemplo, ajústalas a tus archivos)
 var card_textures = [
-	preload("res://assets/cecilia_immergreen.webp"),
-	preload("res://assets/honshou_marin.webp"),
-	preload("res://assets/kikirara_vivi.webp"),
-	preload("res://assets/mizumiya_su.webp"),
-	preload("res://assets/nakiri_ayame.webp"),
-	preload("res://assets/raora_panthera.webp"),
+	preload("res://assets/Adreus, Keeper of Armageddon_Fiend_XYZ Monster_lvl5_DARK.jpg"),
+	preload("res://assets/Alien Ammonite_Reptile_Tuner Monster_lvl1_LIGHT.jpg"),
+	preload("res://assets/Alien Mother_Reptile_Effect Monster_lvl6_DARK.jpg"),
+	preload("res://assets/Dark Magician Girl the Dragon Knight_Dragon_Fusion Monster_lvl7_DARK.jpg"),
+	preload("res://assets/Magician of Black Chaos MAX_Spellcaster_Ritual Effect Monster_lvl8_DARK.jpg"),
+	preload("res://assets/Magician's Robe_Spellcaster_Effect Monster_lvl2_DARK.jpg"),
 ]
 
-var back_texture = preload("res://assets/reverse_test.webp")
+var back_texture = preload("res://assets/Sin_carta.webp")
 
 var deck = []
 var first_card = null
@@ -25,9 +25,9 @@ var input_locked = false
 
 func _ready():
 	setup_game()
+	pantalla_victoria.hide()
 
 func setup_game():
-	# Duplicar las texturas para crear los pares
 	for tex in card_textures:
 		deck.append(tex)
 		deck.append(tex)
@@ -35,7 +35,6 @@ func setup_game():
 	# Mezclar las cartas
 	deck.shuffle()
 	
-	# Instanciar cada carta en la cuadrícula
 	for i in range(deck.size()):
 		var card = card_scene.instantiate()
 		card.id = deck[i].resource_path # Usar la ruta como ID para comparar
@@ -61,8 +60,16 @@ func check_match():
 	
 	if first_card.id == second_card.id:
 		# ¡Es un par!
-		first_card.disabled = true
-		second_card.disabled = true
+		first_card.match_found()
+		second_card.match_found()
+		
+		# Aumentar el contador
+		pares_encontrados += 1
+		
+		# Revisar si ya encontramos todos (la mitad del total de cartas)
+		if pares_encontrados == deck.size() / 2:
+			pantalla_victoria.show() # Mostrar la pantalla de victoria
+			
 		reset_selection()
 	else:
 		# No coinciden, esperar y regresar
@@ -70,9 +77,14 @@ func check_match():
 		await timer.timeout
 		first_card.unflip()
 		second_card.unflip()
-		reset_selection()
+		reset_selection()	
 
 func reset_selection():
 	first_card = null
 	second_card = null
 	input_locked = false
+
+
+func _on_button_pressed():
+	# Recarga la escena actual, reseteando todo el juego
+	get_tree().reload_current_scene()
